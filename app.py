@@ -206,8 +206,7 @@ def main() -> None:
             "https://batechdemo.in/agathiya/",
             "https://server99.batechnology.org:2087/evo/login",
             "http://mail.batechdemo.in/webmail/",
-            "https://www.batechnology.org/",
-            "https://batechdemo.in/posteit/"
+            "https://www.batechnology.org/"
         ]
 
     headers = parse_headers(args.header)
@@ -236,4 +235,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

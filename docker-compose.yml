@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  loadtest:
+    build: .
+    container_name: loadtest
+    # Remove network isolation for better performance
+    network_mode: host
+    # Add capabilities for higher performance
+    cap_add:
+      - NET_ADMIN
+    # Optimize for high throughput
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+    # Example command - override with your own
+    command: >
+      python app.py 
+      --url https://batechdemo.in/hometech/ 
+      --url https://www.batechnology.org/ 
+      --insecure 
+      --rps 10000 
+      --concurrency 3000 
+      --duration 300

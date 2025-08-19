@@ -42,8 +42,8 @@ async def single_url_load(url: str, rps: int, concurrency: int, timeout_s: float
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="Single-URL load driver")
     p.add_argument("--url", required=True)
-    p.add_argument("--rps", type=int, default=1000)
-    p.add_argument("--concurrency", type=int, default=300)
+    p.add_argument("--rps", type=int, default=10000)
+    p.add_argument("--concurrency", type=int, default=2500)
     p.add_argument("--timeout", type=float, default=15.0)
     p.add_argument("--insecure", action="store_true")
     return p.parse_args()
